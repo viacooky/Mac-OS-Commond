@@ -1,0 +1,15 @@
+[General]
+loglevel = notify
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.1, localhost, *.local
+
+[Proxy]
+HK = ss, viacooky.com, 8989, encrypt-method=aes-256-cfb, password=ss123456, udp-relay=true
+
+[Rule]
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge3/reject.list,REJECT
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge3/china_media.list,DIRECT
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge3/global_media.list,HK
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge3/proxy.list,HK
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge3/domestic.list,DIRECT
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge3/apple.list,HK
+FINAL,DIRECT
